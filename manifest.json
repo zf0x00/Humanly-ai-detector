@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Humanly AI Content Analyzer",
+  "version": "1.0.0",
+  "description": "Analyze blog content for AI detection, readability, and security using Humanly AI",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-script.js"],
+      "css": ["widget.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Humanly AI Analyzer"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["widget.html", "widget.css", "api.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
