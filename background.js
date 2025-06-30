@@ -43,7 +43,7 @@ async function analyzeContent(contentData) {
         },
 
         body: JSON.stringify({
-          key: "Z84XVNVHKE1316E2VRJ853OLDUNTRNC1",
+          key: "8PFIRCDHIATH0NJ28QDC1BYUOCC4MVU3",
           text: contentData.content,
           // sentences: false,
           // language: contentData.language || "en",
